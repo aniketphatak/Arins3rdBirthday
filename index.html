@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP for Arin's 3rd Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      padding-right: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    /* Invitation Section */
+    .invitation-container {
+      background-color: #ffffff;
+      border: 5px solid #003366;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .header {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .subheader {
+      font-size: 25px;
+      color: red;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .train-section {
+      margin: 20px 0;
+    }
+    .train-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .details {
+      display: flex;
+      justify-content: space-around;
+      margin: 10px 0;
+    }
+    .date, .location {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .location .address {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Invitation Section -->
+  <div class="invitation-container">
+    <div class="train-section">
+      <img class="train-img" src="Arin-Birthday-Invite.png" alt="Thomas the Train">
+    </div>
+
+  </div>
+
+  <!-- RSVP Form Section -->
+  <div class="container">
+    <h1>RSVP for Arin's 3rd Birthday</h1>
+
+    <form id="rsvpForm" method="POST" action="/submit-rsvp">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="attendance">Will you attend?</label>
+      <select id="attendance" name="attendance" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <label for="guests">Number of guests:</label>
+      <input type="number" id="guests" name="guests" value="1" min="1" required>
+
+      <label for="message">Message (optional):</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit RSVP</button>
+    </form>
+  </div>
+
+</body>
+</html>
